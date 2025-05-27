@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOTE SPHERE</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> -->
+  <link rel="stylesheet" href="css/stylesheet.css" />
+  <!-- Include Font Awesome CSS for the eye icon -->
+</head>
+
+<body>
+  <div id="headerSection">
+    <h1>VOTE SPHERE</h1>
+    <hr />
+  </div>
+
+  <div id="bodySection">
+    <form action="api/login.php" method="post">
+      <h3>Login</h3>
+      <div class="input-container">
+        <i class="fas fa-user icon"></i>
+        <input type="text" name="name" placeholder="Enter Username" />
+      </div>
+      <div class="input-container">
+        <i class="fas fa-lock icon"></i>
+        <input type="password" name="password" placeholder="Enter Password" id="passwordInput" />
+        <!-- <i class="far fa-eye password-icon" onclick="togglePassword()"></i> -->
+      </div>
+      <div class="select-container">
+        <i class="fas fa-users icon"></i>
+        <select name="role">
+          <option value="1">Admin</option>
+          <option value="2">Voter</option>
+          <option value="3">Candidate</option>
+        </select>
+      </div>
+      <button id="loginbtn" type="submit">Login</button>
+      <div class="new-user">
+        New user <u><a href="routes/register.html">Register Here</a></u>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("passwordInput");
+      const passwordIcon = document.querySelector(".password-icon");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        passwordIcon.classList.remove("far", "fa-eye");
+        passwordIcon.classList.add("far", "fa-eye-slash");
+      } else {
+        passwordInput.type = "password";
+        passwordIcon.classList.remove("far", "fa-eye-slash");
+        passwordIcon.classList.add("far", "fa-eye");
+      }
+    }
+  </script>
+</body>
+
+</html>

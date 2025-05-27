@@ -1,0 +1,156 @@
+body {
+  font-family: Arial, sans-serif;
+  /* text-align: center; */
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+#headerSection {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+#backbtn,
+#logoutbtn {
+  margin: 10px;
+  padding: 10px 15px; /* Adjusted padding */
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#backbtn {
+  background-color: #4caf50; /* Green color */
+  color: white;
+  float: left;
+}
+
+#logoutbtn {
+  background-color: #f44336; /* Red color */
+  color: white;
+  float: right;
+}
+
+h1 {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 35px;
+ 
+}
+
+hr {
+  border-top: 1px solid #dee2e6;
+}
+
+#container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+#Profile {
+  width: 30%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#Profile img {
+  height: 100px;
+  width: 100px;
+}
+
+#Profile b {
+  font-size: 18px;
+}
+
+#Candidates {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-box {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+}
+
+.candidate-box img {
+  height: 80px;
+  width: 80px;
+}
+
+.candidate-box b {
+  font-size: 16px;
+}
+
+#votebtn,
+#voted {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+
+#voted {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#votebtn:hover {
+  background-color: #4caf50;
+}
+
+#toggleGraphBtn {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+
+#toggleGraphBtn:hover {
+  background-color: #828282;
+}
+
+.graph-container {
+  width: 400px; /* Adjust the width as needed */
+  height: 300px; /* Adjust the height as needed */
+  margin: 20px auto; /* Adjust the margin as needed */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.section-box {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.section-box h2 {
+  text-align: center;
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}

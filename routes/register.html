@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <title>ONLINE VOTING SYSTEM</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/stylesheet_register.css" />
+  </head>
+
+  <body>
+    <div id="headerSection">
+      <h1>VOTE SPHERE</h1>
+      <hr />
+    </div>
+
+    <div id="bodySection">
+      <form
+        action="../api/register.php"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <h3>Registration</h3>
+        <div class="side-by-side">
+          <input type="text" name="name" placeholder="Enter Name" />
+        </div>
+        <div class="side-by-side">
+          <input type="email" name="email" placeholder="Enter Email" />
+        </div>
+        <div class="side-by-side">
+          <div class="password-container">
+            <input
+              type="password"
+              name="password"
+              id="passwordInput"
+              placeholder="Enter Password"
+            />
+            <i
+              class="far fa-eye password-icon"
+              id="passwordIcon"
+              onclick="togglePassword('passwordInput', 'passwordIcon')"
+            ></i>
+          </div>
+        </div>
+        <div class="side-by-side">
+          <div class="password-container">
+            <input
+              type="password"
+              name="cpassword"
+              id="cpasswordInput"
+              placeholder="Confirm Password"
+            />
+            <i
+              class="far fa-eye password-icon"
+              id="cpasswordIcon"
+              onclick="togglePassword('cpasswordInput', 'cpasswordIcon')"
+            ></i>
+          </div>
+        </div>
+        <div class="side-by-side">
+          Date of Birth: <input type="date" name="dob" id="dobInput" placeholder="Date of Birth" onchange="validateDOB()" />
+          <span id="dobError" style="color: red;"></span>
+        </div>
+        <div class="file-input">
+          Upload your passport photo: <input type="file" name="photo" />
+        </div>
+        <div>
+          Select Role:
+          <select name="role">
+            <option value="1">Admin</option>
+            <option value="2">Voter</option>
+            <option value="3">Candidate</option>
+          </select>
+        </div>
+        <button>Register</button><br /><br />
+        Already a user? <u><a href="../index.html">Login Here</a></u>
+      </form>
+    </div>
+
+    <script>
+      function togglePassword(inputId, iconId) {
+        const passwordInput = document.getElementById(inputId);
+        const passwordIcon = document.getElementById(iconId);
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          passwordIcon.classList.remove("far", "fa-eye");
+          passwordIcon.classList.add("far", "fa-eye-slash");
+        } else {
+          passwordInput.type = "password";
+          passwordIcon.classList.remove("far", "fa-eye-slash");
+          passwordIcon.classList.add("far", "fa-eye");
+        }
+      }
+
+      function validateDOB() {
+        const dobInput = document.getElementById('dobInput');
+        const dobError = document.getElementById('dobError');
+
+        const selectedDate = new Date(dobInput.value);
+        const currentDate = new Date();
+        const ageDifference = currentDate.getFullYear() - selectedDate.getFullYear();
+
+        if (ageDifference < 18) {
+          dobError.textContent = "Invalid! Age must be 18 years or above.";
+          dobInput.setCustomValidity("Invalid date");
+        } else {
+          dobError.textContent = "";
+          dobInput.setCustomValidity("");
+        }
+      }
+    </script>
+  </body>
+</html>

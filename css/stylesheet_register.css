@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+#headerSection {
+  color: black;
+  padding: 40px;
+}
+
+h1 {
+  color: black;
+}
+
+form {
+  width: 450px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h3 {
+  color: black;
+  font-size: 25px;
+}
+
+hr {
+  border: 1px solid #333;
+  margin: 10px 0;
+}
+
+input,
+select,
+button,
+textarea {
+  width: calc(100% - 20px);
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Adjustments for side-by-side inputs */
+form .side-by-side {
+  display: inline-block;
+  width: calc(51% - 7px);
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* Style adjustments for select and file input */
+form select,
+form .file-input {
+  width: 100%;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.file-input {
+  margin-top: 15px;
+}
+
+.password-container {
+  position: relative;
+  width: 100%; /* Adjusted width for password container */
+}
+
+.password-icon {
+  position: absolute;
+  top: 36%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
