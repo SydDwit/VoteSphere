@@ -91,6 +91,6 @@ voteSphere/
 
 ## Contact
 
-Your Name - [@SydDwit](https://github.com/SydDwit)
+Name - [@SydDwit](https://github.com/SydDwit)
 
 Project Link: [https://github.com/SydDwit/VoteSphere](https://github.com/SydDwit/VoteSphere)
